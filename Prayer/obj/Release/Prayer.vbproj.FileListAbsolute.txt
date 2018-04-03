@@ -1,0 +1,13 @@
+C:\Users\30036500\source\repos\Prayer\Prayer\bin\Release\Prayer.exe.config
+C:\Users\30036500\source\repos\Prayer\Prayer\bin\Release\Prayer.exe
+C:\Users\30036500\source\repos\Prayer\Prayer\bin\Release\Prayer.pdb
+C:\Users\30036500\source\repos\Prayer\Prayer\bin\Release\Prayer.xml
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.vbprojResolveAssemblyReference.cache
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.Form1.resources
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.Form2.resources
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.Resources.resources
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.vbproj.GenerateResource.Cache
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.vbproj.CoreCompileInputs.cache
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.exe
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.xml
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Release\Prayer.pdb

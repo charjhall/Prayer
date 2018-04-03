@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Prayer", "Prayer\Prayer.vbproj", "{0930BA19-712E-4AFF-9BC1-494AD57F4B6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0930BA19-712E-4AFF-9BC1-494AD57F4B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0930BA19-712E-4AFF-9BC1-494AD57F4B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0930BA19-712E-4AFF-9BC1-494AD57F4B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0930BA19-712E-4AFF-9BC1-494AD57F4B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F6DDBDD-8ACF-4DCA-9A0A-D4F289F8BF93}
+	EndGlobalSection
+EndGlobal
