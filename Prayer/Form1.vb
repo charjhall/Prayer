@@ -27,6 +27,7 @@
         IntervalNum.Text = My.Settings.Interval
         LoadRequests()
         Timer1.Enabled = True
+        NextRequestLabel.Text = Requests.Item(My.Settings.RequestsIndex)
     End Sub
 
     Public Sub PushNextTime(increment As Double)
@@ -47,9 +48,12 @@
             Dim f2 As Prayer = New Prayer(My.Settings.RequestsIndex, request)
             SetNextTime()
             My.Settings.RequestsIndex += 1
+            NextRequestLabel.Text = Requests.Item(My.Settings.RequestsIndex)
+            IndexNum.Text = My.Settings.RequestsIndex
             f2.Show()
             'SaveSourceAndIndex(infosource)
         End If
+        UpdateIndexAndNR()
     End Sub
 
     Public Sub LoadRequests()
@@ -170,6 +174,11 @@
         Dim f2 As Prayer = New Prayer(My.Settings.RequestsIndex, request)
         SetNextTime()
         My.Settings.RequestsIndex += 1
+        UpdateIndexAndNR()
         f2.Show()
+    End Sub
+    Private Sub UpdateIndexAndNR()
+        IndexNum.Text = My.Settings.RequestsIndex
+        NextRequestLabel.Text = Requests.Item(My.Settings.RequestsIndex)
     End Sub
 End Class

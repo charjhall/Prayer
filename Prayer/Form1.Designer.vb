@@ -52,6 +52,8 @@ Partial Class Form1
         Me.NewRequestRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.SubmitRequestButton = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.NextRequestLabel = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Timer1
@@ -374,7 +376,7 @@ Partial Class Form1
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(314, 401)
+        Me.Button2.Location = New System.Drawing.Point(345, 429)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(220, 34)
@@ -382,12 +384,33 @@ Partial Class Form1
         Me.Button2.Text = "Show next Request Now"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'NextRequestLabel
+        '
+        Me.NextRequestLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.NextRequestLabel.Location = New System.Drawing.Point(104, 389)
+        Me.NextRequestLabel.Name = "NextRequestLabel"
+        Me.NextRequestLabel.Size = New System.Drawing.Size(450, 36)
+        Me.NextRequestLabel.TabIndex = 33
+        Me.NextRequestLabel.Text = "Next Request"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(8, 389)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(94, 19)
+        Me.Label4.TabIndex = 34
+        Me.Label4.Text = "Next Request:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(584, 621)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.NextRequestLabel)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.SubmitRequestButton)
         Me.Controls.Add(Me.NewRequestRichTextBox)
@@ -451,4 +474,6 @@ Partial Class Form1
     Friend WithEvents NewRequestRichTextBox As RichTextBox
     Friend WithEvents SubmitRequestButton As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents NextRequestLabel As Label
+    Friend WithEvents Label4 As Label
 End Class
