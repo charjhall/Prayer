@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Prayer.exe" size="728024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Prayer.exe" size="733144">
       <assemblyIdentity name="Prayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bxQZtoavXyzpk27hnAzF9c6F3u3baUSgS7QWAa+m5MQ=</dsig:DigestValue>
+        <dsig:DigestValue>nk8wuvILHF4iHp6sCrqgJf+7kEFTV3FOezVL4BWJftw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

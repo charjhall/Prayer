@@ -106,6 +106,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomMsgBox.Designer.vb">
+      <DependentUpon>CustomMsgBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMsgBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="RequestFileInterface.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CustomMsgBox.resx">
+      <DependentUpon>CustomMsgBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

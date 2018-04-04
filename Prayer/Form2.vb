@@ -1,6 +1,7 @@
 ﻿Public Class Prayer
     Dim request As String
     Dim index As Integer
+    Dim cmsg As CustomMsgBox = New CustomMsgBox
     Public Sub New(_index As Integer, _request As String)
 
         ' This call is required by the designer.
@@ -40,7 +41,7 @@
             p.Show()
             Me.Close()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            cmsg.ShowBox(ex.Message)
         End Try
     End Sub
 
@@ -49,7 +50,7 @@
         For Each r As String In Form1.Requests
             sb.Append(r & vbCrLf)
         Next
-        MsgBox(sb.ToString)
+        cmsg.ShowBox(sb.ToString)
     End Sub
 
 

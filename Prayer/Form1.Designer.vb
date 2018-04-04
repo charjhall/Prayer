@@ -48,6 +48,10 @@ Partial Class Form1
         Me.IntervalNum = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.FileSourceLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.NewRequestRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.SubmitRequestButton = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Timer1
@@ -126,7 +130,7 @@ Partial Class Form1
         Me.DebugButton.FlatAppearance.BorderSize = 0
         Me.DebugButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DebugButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.DebugButton.Location = New System.Drawing.Point(0, 369)
+        Me.DebugButton.Location = New System.Drawing.Point(2, 582)
         Me.DebugButton.Name = "DebugButton"
         Me.DebugButton.Size = New System.Drawing.Size(75, 27)
         Me.DebugButton.TabIndex = 12
@@ -140,7 +144,7 @@ Partial Class Form1
         Me.ExampleButton.FlatAppearance.BorderSize = 0
         Me.ExampleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExampleButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ExampleButton.Location = New System.Drawing.Point(412, 369)
+        Me.ExampleButton.Location = New System.Drawing.Point(414, 582)
         Me.ExampleButton.Name = "ExampleButton"
         Me.ExampleButton.Size = New System.Drawing.Size(172, 28)
         Me.ExampleButton.TabIndex = 13
@@ -154,7 +158,7 @@ Partial Class Form1
         Me.YColonButton.FlatAppearance.BorderSize = 0
         Me.YColonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.YColonButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.YColonButton.Location = New System.Drawing.Point(321, 282)
+        Me.YColonButton.Location = New System.Drawing.Point(323, 495)
         Me.YColonButton.Name = "YColonButton"
         Me.YColonButton.Size = New System.Drawing.Size(174, 26)
         Me.YColonButton.TabIndex = 14
@@ -167,7 +171,7 @@ Partial Class Form1
         Me.YColonRequest.AutoSize = True
         Me.YColonRequest.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.YColonRequest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.YColonRequest.Location = New System.Drawing.Point(113, 287)
+        Me.YColonRequest.Location = New System.Drawing.Point(115, 500)
         Me.YColonRequest.Name = "YColonRequest"
         Me.YColonRequest.Size = New System.Drawing.Size(202, 21)
         Me.YColonRequest.TabIndex = 15
@@ -179,7 +183,7 @@ Partial Class Form1
         Me.ExReqTitle.AutoSize = True
         Me.ExReqTitle.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExReqTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.ExReqTitle.Location = New System.Drawing.Point(126, 248)
+        Me.ExReqTitle.Location = New System.Drawing.Point(128, 461)
         Me.ExReqTitle.Name = "ExReqTitle"
         Me.ExReqTitle.Size = New System.Drawing.Size(189, 20)
         Me.ExReqTitle.TabIndex = 16
@@ -190,7 +194,7 @@ Partial Class Form1
         '
         Me.YColonLabel.AutoSize = True
         Me.YColonLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.YColonLabel.Location = New System.Drawing.Point(140, 268)
+        Me.YColonLabel.Location = New System.Drawing.Point(142, 481)
         Me.YColonLabel.Name = "YColonLabel"
         Me.YColonLabel.Size = New System.Drawing.Size(137, 19)
         Me.YColonLabel.TabIndex = 17
@@ -201,7 +205,7 @@ Partial Class Form1
         '
         Me.NColonLabel.AutoSize = True
         Me.NColonLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.NColonLabel.Location = New System.Drawing.Point(140, 319)
+        Me.NColonLabel.Location = New System.Drawing.Point(142, 532)
         Me.NColonLabel.Name = "NColonLabel"
         Me.NColonLabel.Size = New System.Drawing.Size(158, 19)
         Me.NColonLabel.TabIndex = 19
@@ -213,7 +217,7 @@ Partial Class Form1
         Me.NColonText.AutoSize = True
         Me.NColonText.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.NColonText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.NColonText.Location = New System.Drawing.Point(83, 338)
+        Me.NColonText.Location = New System.Drawing.Point(85, 551)
         Me.NColonText.Name = "NColonText"
         Me.NColonText.Size = New System.Drawing.Size(232, 21)
         Me.NColonText.TabIndex = 18
@@ -227,7 +231,7 @@ Partial Class Form1
         Me.NColonButton.FlatAppearance.BorderSize = 0
         Me.NColonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.NColonButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.NColonButton.Location = New System.Drawing.Point(321, 335)
+        Me.NColonButton.Location = New System.Drawing.Point(323, 548)
         Me.NColonButton.Name = "NColonButton"
         Me.NColonButton.Size = New System.Drawing.Size(174, 25)
         Me.NColonButton.TabIndex = 20
@@ -313,19 +317,81 @@ Partial Class Form1
         'FileSourceLinkLabel
         '
         Me.FileSourceLinkLabel.AutoSize = True
-        Me.FileSourceLinkLabel.Location = New System.Drawing.Point(255, 207)
+        Me.FileSourceLinkLabel.Location = New System.Drawing.Point(-2, 551)
         Me.FileSourceLinkLabel.Name = "FileSourceLinkLabel"
         Me.FileSourceLinkLabel.Size = New System.Drawing.Size(76, 19)
         Me.FileSourceLinkLabel.TabIndex = 28
         Me.FileSourceLinkLabel.TabStop = True
         Me.FileSourceLinkLabel.Text = "File Source"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(0, 195)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(584, 34)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Add Prayer Request"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'NewRequestRichTextBox
+        '
+        Me.NewRequestRichTextBox.Location = New System.Drawing.Point(12, 236)
+        Me.NewRequestRichTextBox.Name = "NewRequestRichTextBox"
+        Me.NewRequestRichTextBox.Size = New System.Drawing.Size(560, 96)
+        Me.NewRequestRichTextBox.TabIndex = 30
+        Me.NewRequestRichTextBox.Text = ""
+        Me.NewRequestRichTextBox.Visible = False
+        '
+        'SubmitRequestButton
+        '
+        Me.SubmitRequestButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.SubmitRequestButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.SubmitRequestButton.FlatAppearance.BorderSize = 0
+        Me.SubmitRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SubmitRequestButton.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SubmitRequestButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.SubmitRequestButton.Location = New System.Drawing.Point(0, 339)
+        Me.SubmitRequestButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.SubmitRequestButton.Name = "SubmitRequestButton"
+        Me.SubmitRequestButton.Size = New System.Drawing.Size(584, 34)
+        Me.SubmitRequestButton.TabIndex = 31
+        Me.SubmitRequestButton.Text = "Submit Prayer Request"
+        Me.SubmitRequestButton.UseVisualStyleBackColor = False
+        Me.SubmitRequestButton.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.Button2.Location = New System.Drawing.Point(314, 401)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(220, 34)
+        Me.Button2.TabIndex = 32
+        Me.Button2.Text = "Show next Request Now"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(584, 397)
+        Me.ClientSize = New System.Drawing.Size(584, 621)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.SubmitRequestButton)
+        Me.Controls.Add(Me.NewRequestRichTextBox)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.FileSourceLinkLabel)
         Me.Controls.Add(Me.IntervalNum)
         Me.Controls.Add(Me.Label5)
@@ -381,4 +447,8 @@ Partial Class Form1
     Friend WithEvents IntervalNum As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents FileSourceLinkLabel As LinkLabel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents NewRequestRichTextBox As RichTextBox
+    Friend WithEvents SubmitRequestButton As Button
+    Friend WithEvents Button2 As Button
 End Class
