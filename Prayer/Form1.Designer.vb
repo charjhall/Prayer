@@ -39,6 +39,7 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Timer1
@@ -53,7 +54,7 @@ Partial Class Form1
         Me.SetIntervalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SetIntervalButton.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SetIntervalButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.SetIntervalButton.Location = New System.Drawing.Point(270, 140)
+        Me.SetIntervalButton.Location = New System.Drawing.Point(270, 159)
         Me.SetIntervalButton.Margin = New System.Windows.Forms.Padding(4)
         Me.SetIntervalButton.Name = "SetIntervalButton"
         Me.SetIntervalButton.Size = New System.Drawing.Size(182, 85)
@@ -66,10 +67,10 @@ Partial Class Form1
         Me.IntervalTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.IntervalTextBox.Font = New System.Drawing.Font("Goudy Old Style", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IntervalTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.IntervalTextBox.Location = New System.Drawing.Point(271, 94)
+        Me.IntervalTextBox.Location = New System.Drawing.Point(270, 113)
         Me.IntervalTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.IntervalTextBox.Name = "IntervalTextBox"
-        Me.IntervalTextBox.Size = New System.Drawing.Size(181, 40)
+        Me.IntervalTextBox.Size = New System.Drawing.Size(182, 40)
         Me.IntervalTextBox.TabIndex = 4
         '
         'NotifyIcon1
@@ -93,9 +94,8 @@ Partial Class Form1
         Me.SetSourceFile.Name = "SetSourceFile"
         Me.SetSourceFile.Size = New System.Drawing.Size(474, 342)
         Me.SetSourceFile.TabIndex = 9
-        Me.SetSourceFile.Text = "First time here? Click here to select your prayer request file."
+        Me.SetSourceFile.Text = "First time here? Click here to get started."
         Me.SetSourceFile.UseVisualStyleBackColor = False
-        Me.SetSourceFile.Visible = False
         '
         'OpenFileDialogRequests
         '
@@ -119,20 +119,23 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label2.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(85, 72)
+        Me.Label2.Location = New System.Drawing.Point(69, 81)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 19)
+        Me.Label2.Size = New System.Drawing.Size(55, 25)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Line:"
         '
         'IndexNum
         '
         Me.IndexNum.AutoSize = True
+        Me.IndexNum.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IndexNum.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.IndexNum.Location = New System.Drawing.Point(130, 72)
+        Me.IndexNum.Location = New System.Drawing.Point(130, 81)
         Me.IndexNum.Name = "IndexNum"
-        Me.IndexNum.Size = New System.Drawing.Size(35, 19)
+        Me.IndexNum.Size = New System.Drawing.Size(50, 25)
         Me.IndexNum.TabIndex = 22
         Me.IndexNum.Text = "Line"
         '
@@ -143,7 +146,7 @@ Partial Class Form1
         Me.ChangeIndexButton.FlatAppearance.BorderSize = 0
         Me.ChangeIndexButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChangeIndexButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ChangeIndexButton.Location = New System.Drawing.Point(34, 140)
+        Me.ChangeIndexButton.Location = New System.Drawing.Point(34, 159)
         Me.ChangeIndexButton.Name = "ChangeIndexButton"
         Me.ChangeIndexButton.Size = New System.Drawing.Size(182, 85)
         Me.ChangeIndexButton.TabIndex = 23
@@ -155,7 +158,7 @@ Partial Class Form1
         Me.IndexTextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.IndexTextBox.Font = New System.Drawing.Font("Goudy Old Style", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IndexTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.IndexTextBox.Location = New System.Drawing.Point(34, 94)
+        Me.IndexTextBox.Location = New System.Drawing.Point(34, 113)
         Me.IndexTextBox.Name = "IndexTextBox"
         Me.IndexTextBox.Size = New System.Drawing.Size(182, 40)
         Me.IndexTextBox.TabIndex = 24
@@ -163,20 +166,23 @@ Partial Class Form1
         'IntervalNum
         '
         Me.IntervalNum.AutoSize = True
+        Me.IntervalNum.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IntervalNum.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.IntervalNum.Location = New System.Drawing.Point(366, 72)
+        Me.IntervalNum.Location = New System.Drawing.Point(366, 81)
         Me.IntervalNum.Name = "IntervalNum"
-        Me.IntervalNum.Size = New System.Drawing.Size(54, 19)
+        Me.IntervalNum.Size = New System.Drawing.Size(48, 25)
         Me.IntervalNum.TabIndex = 27
-        Me.IntervalNum.Text = "Interval"
+        Me.IntervalNum.Text = "Min"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(302, 72)
+        Me.Label5.Location = New System.Drawing.Point(279, 81)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 19)
+        Me.Label5.Size = New System.Drawing.Size(81, 25)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "Interval:"
         '
@@ -212,6 +218,17 @@ Partial Class Form1
         Me.Button2.Text = "Show next Request Now"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(391, 81)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 25)
+        Me.Label1.TabIndex = 33
+        Me.Label1.Text = "Min"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -219,6 +236,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(474, 342)
         Me.Controls.Add(Me.SetSourceFile)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ExampleButton)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
@@ -256,4 +274,5 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label1 As Label
 End Class

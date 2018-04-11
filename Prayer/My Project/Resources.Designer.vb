@@ -70,6 +70,17 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Mom: Grandad Health, kids in general, migraines, anxiety from move, maybe biological, why her chest is hurting (cause)
+        '''Dad: Confusion with purpose at work, selling the house, body pain (back), Steady meeting with his accountability group, wisdom on how to help mom, wisdom on how to speak to siblings
+        '''Steadman: prep for philly, restraint with his tongue, Fire for evangelism in his sphere of influence, grace with others, spiritual growth for friends, cast his anxiety and worries on you, be ready to seize opp [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property PrayerList() As String
+            Get
+                Return ResourceManager.GetString("PrayerList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to \\svr300-003\deptshare\yca\Chall\PrayerList.txt.
         '''</summary>
         Friend ReadOnly Property source() As String

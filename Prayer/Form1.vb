@@ -45,9 +45,11 @@
         End If
     End Sub
     Private Sub ShowNext()
-        If My.Settings.RequestsIndex > Requests.Count Then
+        If My.Settings.RequestsIndex > (Requests.Count - 1) Then
             My.Settings.RequestsIndex = 0
+            UpdateIndex()
         End If
+        'MsgBox(My.Settings.RequestsIndex)
         request = _requests(My.Settings.RequestsIndex)
         While request.Equals("")
             My.Settings.RequestsIndex += 1
@@ -56,10 +58,10 @@
         My.Settings.RequestsIndex += 1
         Try
             IndexNum.Text = My.Settings.RequestsIndex
-            UpdateIndexAndNR()
+            UpdateIndex()
         Catch ex As ArgumentOutOfRangeException
             My.Settings.RequestsIndex = 0
-            UpdateIndexAndNR()
+            UpdateIndex()
         End Try
         Dim f2 As Prayer = New Prayer(My.Settings.RequestsIndex, request)
         SetNextTime()
@@ -88,7 +90,6 @@
             cmsg.ShowBox("Please select a source file first.")
         Else
             My.Settings.Interval = CType(IntervalTextBox.Text, Integer)
-            'RequestsIndex = CType(IndexTextBox.Text, Integer)
             Timer1.Interval = My.Settings.Interval
             PushNextTime(1.0)
             IntervalNum.Text = My.Settings.Interval
@@ -96,6 +97,8 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SetSourceFile.Click
+        Dim FirstTime As FirstTime = New FirstTime()
+        FirstTime.Show()
         Dim result As DialogResult = cmsg.ShowBox("Select a file with requests in the format of Name/Organization: prayer request. This will allow for the optimal functioning of the program, but is not requirement. The program will treat each seperate line as a new request, but the program only treats the line as a new line if you press enter at the end of the line.")
         If result = DialogResult.OK Then
             result = OpenFileDialogRequests.ShowDialog()
@@ -135,9 +138,14 @@
 
     Private Sub ChangeIndexButton_Click(sender As Object, e As EventArgs) Handles ChangeIndexButton.Click
         Try
-            My.Settings.RequestsIndex = CType(IndexTextBox.Text, Integer)
+            Dim newIndex As Integer = CType(IndexTextBox.Text, Integer)
+            newIndex = newIndex Mod (Requests.Count - 1)
+            My.Settings.RequestsIndex = newIndex
+            UpdateIndex()
             IndexNum.Text = My.Settings.RequestsIndex
             PushNextTime(1.0)
+        Catch ex As OverflowException
+            MsgBox("Please put a reasonably sized number in the box.")
         Catch ex As InvalidCastException
             cmsg.ShowBox("Please put a number in the index box.")
         Catch ex As ArgumentOutOfRangeException
@@ -166,7 +174,22 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ShowNext()
     End Sub
-    Private Sub UpdateIndexAndNR()
+    Private Sub UpdateIndex()
+        My.Settings.RequestsIndex = My.Settings.RequestsIndex Mod Requests.Count
         IndexNum.Text = My.Settings.RequestsIndex
+    End Sub
+
+    Private Sub BoopButton_Click(sender As Object, e As EventArgs)
+        LoadRequests()
+        Process.Start(My.Settings.FileSource)
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        cmsg.ShowBox("This is the line in the Prayer Requests text file you submitted.")
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        cmsg.ShowBox("This is the time interval in minutes that requests appear on screen.")
+
     End Sub
 End Class

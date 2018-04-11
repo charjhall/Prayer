@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -121,6 +121,12 @@
     <Compile Include="ExampleRequest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FirstTime.Designer.vb">
+      <DependentUpon>FirstTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExampleRequest.resx">
       <DependentUpon>ExampleRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstTime.resx">
+      <DependentUpon>FirstTime.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -202,6 +211,7 @@
   <ItemGroup>
     <Content Include="ctrans.ico" />
     <Content Include="prayerhandstransparent.ico" />
+    <None Include="Resources\PrayerList.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

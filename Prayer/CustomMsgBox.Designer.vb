@@ -83,7 +83,6 @@ Partial Class CustomMsgBox
         Me.Name = "CustomMsgBox"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Title"
         Me.ResumeLayout(False)
 
     End Sub
