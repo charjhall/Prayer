@@ -22,6 +22,7 @@ Partial Class ExampleRequest
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ExampleRequest))
         Me.NColonButton = New System.Windows.Forms.Button()
         Me.NColonLabel = New System.Windows.Forms.Label()
         Me.NColonText = New System.Windows.Forms.Label()
@@ -131,6 +132,7 @@ Partial Class ExampleRequest
         Me.Controls.Add(Me.ExReqTitle)
         Me.Controls.Add(Me.YColonRequest)
         Me.Controls.Add(Me.YColonButton)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ExampleRequest"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ExampleRequest"

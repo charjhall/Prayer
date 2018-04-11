@@ -6,7 +6,7 @@
     Dim debugdest As String
     Dim HasSourceFile As Boolean
     Dim saved As Boolean
-    Dim cmsg As CustomMsgBox = New CustomMsgBox()
+    Dim cmsg As CustomMsgBox = New CustomMsgBox(True)
     Public Property Requests As ArrayList
         Get
             Return _requests
@@ -25,6 +25,8 @@
         Randomize()
         IndexNum.Text = My.Settings.RequestsIndex
         IntervalNum.Text = My.Settings.Interval
+        My.Settings.FileSource = ""
+        SetSourceFile.Visible = My.Settings.FileSource.Equals("")
         LoadRequests()
         Timer1.Enabled = True
     End Sub
@@ -64,14 +66,21 @@
         f2.Show()
     End Sub
     Public Sub LoadRequests()
-
-        sr = IO.File.OpenText(My.Settings.FileSource)
-        Dim request As String = sr.ReadLine()
-        While request IsNot Nothing
-            _requests.Add(request)
-            request = sr.ReadLine
-        End While
-        sr.Dispose()
+        Try
+            If My.Settings.FileSource.Equals("") Then
+            Else
+                sr = IO.File.OpenText(My.Settings.FileSource)
+                Dim request As String = sr.ReadLine()
+                While request IsNot Nothing
+                    _requests.Add(request)
+                    request = sr.ReadLine
+                End While
+                sr.Dispose()
+                SetSourceFile.Visible = False
+            End If
+        Catch ex As IO.FileNotFoundException
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub SetIntervalButton_Click_1(sender As Object, e As EventArgs) Handles SetIntervalButton.Click
@@ -96,6 +105,7 @@
                 My.Settings.FileSource = filename
             End If
         End If
+        LoadRequests()
     End Sub
     Public Sub UpdateRequests()
         System.IO.File.WriteAllText(My.Settings.FileSource, "")

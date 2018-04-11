@@ -22,6 +22,7 @@ Partial Class CustomMsgBox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomMsgBox))
         Me.btnok = New System.Windows.Forms.Button()
         Me.btncancel = New System.Windows.Forms.Button()
         Me.lblmessage = New System.Windows.Forms.Label()
@@ -77,6 +78,7 @@ Partial Class CustomMsgBox
         Me.Controls.Add(Me.btnok)
         Me.Font = New System.Drawing.Font("Goudy Old Style", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "CustomMsgBox"
         Me.ShowInTaskbar = False

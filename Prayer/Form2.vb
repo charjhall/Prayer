@@ -1,7 +1,7 @@
 ﻿Public Class Prayer
     Dim request As String
     Dim index As Integer
-    Dim cmsg As CustomMsgBox = New CustomMsgBox
+    Dim cmsg As CustomMsgBox = New CustomMsgBox(True)
     Public Sub New(_index As Integer, _request As String)
 
         ' This call is required by the designer.

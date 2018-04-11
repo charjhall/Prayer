@@ -1,5 +1,5 @@
 ﻿Public Class AddRequest
-    Dim cmsg As CustomMsgBox = New CustomMsgBox
+    Dim cmsg As CustomMsgBox = New CustomMsgBox(True)
     Private Sub SubmitRequestButton_Click(sender As Object, e As EventArgs) Handles SubmitRequestButton.Click
         Dim dr As DialogResult = cmsg.ShowBox(NewRequestRichTextBox.Text & vbCrLf & "This is your request. Do you wish to submit it?")
         If dr.Equals(DialogResult.OK) Then
