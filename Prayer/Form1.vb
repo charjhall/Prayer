@@ -27,7 +27,6 @@
         IntervalNum.Text = My.Settings.Interval
         LoadRequests()
         Timer1.Enabled = True
-        NextRequestLabel.Text = Requests.Item(My.Settings.RequestsIndex)
     End Sub
 
     Public Sub PushNextTime(increment As Double)
@@ -40,22 +39,30 @@
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If DateTime.Now.ToString.Equals(nextValidTime.ToString) Then
-            request = _requests(My.Settings.RequestsIndex)
-            While request.Equals("")
-                My.Settings.RequestsIndex += 1
-                request = _requests(My.Settings.RequestsIndex)
-            End While
-            Dim f2 As Prayer = New Prayer(My.Settings.RequestsIndex, request)
-            SetNextTime()
-            My.Settings.RequestsIndex += 1
-            NextRequestLabel.Text = Requests.Item(My.Settings.RequestsIndex)
-            IndexNum.Text = My.Settings.RequestsIndex
-            f2.Show()
-            'SaveSourceAndIndex(infosource)
+            ShowNext()
         End If
-        UpdateIndexAndNR()
     End Sub
-
+    Private Sub ShowNext()
+        If My.Settings.RequestsIndex > Requests.Count Then
+            My.Settings.RequestsIndex = 0
+        End If
+        request = _requests(My.Settings.RequestsIndex)
+        While request.Equals("")
+            My.Settings.RequestsIndex += 1
+            request = _requests(My.Settings.RequestsIndex)
+        End While
+        My.Settings.RequestsIndex += 1
+        Try
+            IndexNum.Text = My.Settings.RequestsIndex
+            UpdateIndexAndNR()
+        Catch ex As ArgumentOutOfRangeException
+            My.Settings.RequestsIndex = 0
+            UpdateIndexAndNR()
+        End Try
+        Dim f2 As Prayer = New Prayer(My.Settings.RequestsIndex, request)
+        SetNextTime()
+        f2.Show()
+    End Sub
     Public Sub LoadRequests()
 
         sr = IO.File.OpenText(My.Settings.FileSource)
@@ -80,19 +87,20 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SetSourceFile.Click
-        cmsg.ShowBox("Select a file with requests in the format of Name/Organization: prayer request. This will allow for the optimal functioning of the program, but is not requirement. The program will treat each seperate line as a new request, but the program only treats the line as a new line if you press enter at the end of the line.")
-        Dim result As DialogResult = OpenFileDialogRequests.ShowDialog()
-        Dim filename As String
+        Dim result As DialogResult = cmsg.ShowBox("Select a file with requests in the format of Name/Organization: prayer request. This will allow for the optimal functioning of the program, but is not requirement. The program will treat each seperate line as a new request, but the program only treats the line as a new line if you press enter at the end of the line.")
         If result = DialogResult.OK Then
-            filename = OpenFileDialogRequests.FileName
-            My.Settings.FileSource = filename
+            result = OpenFileDialogRequests.ShowDialog()
+            Dim filename As String
+            If result = DialogResult.OK Then
+                filename = OpenFileDialogRequests.FileName
+                My.Settings.FileSource = filename
+            End If
         End If
     End Sub
     Public Sub UpdateRequests()
         System.IO.File.WriteAllText(My.Settings.FileSource, "")
         Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter(My.Settings.FileSource, True)
-
+        file = My.Computer.FileSystem.OpenTextFileWriter(My.Settings.FileSource, True, New System.Text.UTF8Encoding)
         For index As Integer = 0 To Requests.Count - 1
             If index = Requests.Count - 1 Then
                 file.Write(Requests(index))
@@ -104,30 +112,16 @@
     End Sub
 
 
-    Private Sub DebugButton_Click(sender As Object, e As EventArgs) Handles DebugButton.Click
+    Private Sub DebugButton_Click(sender As Object, e As EventArgs)
         cmsg.ShowBox(My.Settings.FileSource)
         cmsg.ShowBox(My.Settings.Interval)
     End Sub
 
     Private Sub ExampleButton_Click(sender As Object, e As EventArgs) Handles ExampleButton.Click
-        ExReqTitle.Show()
-        YColonRequest.Show()
-        YColonLabel.Show()
-        NColonLabel.Show()
-        NColonText.Show()
-        YColonButton.Show()
-        NColonButton.Show()
+        Dim exreq As ExampleRequest = New ExampleRequest
+        exreq.Show()
     End Sub
 
-    Private Sub ViewPopupButton_Click(sender As Object, e As EventArgs) Handles YColonButton.Click
-        Dim p As Prayer = New Prayer(2000, YColonRequest.Text)
-        p.Show()
-    End Sub
-
-    Private Sub NColonButton_Click(sender As Object, e As EventArgs) Handles NColonButton.Click
-        Dim p As Prayer = New Prayer(2000, NColonText.Text)
-        p.Show()
-    End Sub
 
     Private Sub ChangeIndexButton_Click(sender As Object, e As EventArgs) Handles ChangeIndexButton.Click
         Try
@@ -136,10 +130,13 @@
             PushNextTime(1.0)
         Catch ex As InvalidCastException
             cmsg.ShowBox("Please put a number in the index box.")
+        Catch ex As ArgumentOutOfRangeException
+            My.Settings.RequestsIndex = 0
+            IndexNum.Text = My.Settings.RequestsIndex
         End Try
     End Sub
 
-    Private Sub FileSourceLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles FileSourceLinkLabel.LinkClicked
+    Private Sub FileSourceLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         Try
             Process.Start(My.Settings.FileSource)
         Catch ex As Exception
@@ -148,17 +145,8 @@
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        NewRequestRichTextBox.Show()
-        SubmitRequestButton.Show()
-    End Sub
-
-    Private Sub SubmitRequestButton_Click(sender As Object, e As EventArgs) Handles SubmitRequestButton.Click
-        Dim dr As DialogResult = cmsg.ShowBox(NewRequestRichTextBox.Text & vbCrLf & "This is your request. Do you wish to submit it?")
-        If dr.Equals(DialogResult.OK) Then
-            Requests.Add(NewRequestRichTextBox.Text)
-            UpdateRequests()
-            NewRequestRichTextBox.Text = ""
-        End If
+        Dim addreq As AddRequest = New AddRequest
+        addreq.Show()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Closed
@@ -166,19 +154,9 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        request = _requests(My.Settings.RequestsIndex)
-        While request.Equals("")
-            My.Settings.RequestsIndex += 1
-            request = _requests(My.Settings.RequestsIndex)
-        End While
-        Dim f2 As Prayer = New Prayer(My.Settings.RequestsIndex, request)
-        SetNextTime()
-        My.Settings.RequestsIndex += 1
-        UpdateIndexAndNR()
-        f2.Show()
+        ShowNext()
     End Sub
     Private Sub UpdateIndexAndNR()
         IndexNum.Text = My.Settings.RequestsIndex
-        NextRequestLabel.Text = Requests.Item(My.Settings.RequestsIndex)
     End Sub
 End Class

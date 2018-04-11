@@ -10,10 +10,10 @@
         ' Add any initialization after the InitializeComponent() call.
         Dim NameAndText() As String = _request.Split(":")
         If NameAndText.Count > 1 Then
-            PrayerRequestTitle.Text = NameAndText(0)
-            prayer_request_label.Text = NameAndText(1)
+            PrayerRequestTitle.Text = NameAndText(0).Trim
+            prayer_request_label.Text = NameAndText(1).Trim
         Else
-            prayer_request_label.Text = NameAndText(0)
+            prayer_request_label.Text = NameAndText(0).Trim
         End If
         request = _request
         index = _index

@@ -17,3 +17,5 @@ C:\Users\30036500\source\repos\Prayer\Prayer\bin\Debug\Prayer.application
 C:\Users\30036500\source\repos\Prayer\Prayer\obj\Debug\Prayer.exe.manifest
 C:\Users\30036500\source\repos\Prayer\Prayer\obj\Debug\Prayer.application
 C:\Users\30036500\source\repos\Prayer\Prayer\obj\Debug\Prayer.CustomMsgBox.resources
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Debug\Prayer.ExampleRequest.resources
+C:\Users\30036500\source\repos\Prayer\Prayer\obj\Debug\Prayer.AddRequest.resources

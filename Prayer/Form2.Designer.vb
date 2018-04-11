@@ -34,9 +34,9 @@ Partial Class Prayer
         '
         Me.prayer_request_label.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prayer_request_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.prayer_request_label.Location = New System.Drawing.Point(0, 71)
+        Me.prayer_request_label.Location = New System.Drawing.Point(0, 39)
         Me.prayer_request_label.Name = "prayer_request_label"
-        Me.prayer_request_label.Size = New System.Drawing.Size(418, 216)
+        Me.prayer_request_label.Size = New System.Drawing.Size(418, 125)
         Me.prayer_request_label.TabIndex = 1
         Me.prayer_request_label.Text = "Prayer Request"
         '
@@ -47,7 +47,7 @@ Partial Class Prayer
         Me.EditRequestButton.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.EditRequestButton.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditRequestButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.EditRequestButton.Location = New System.Drawing.Point(0, 501)
+        Me.EditRequestButton.Location = New System.Drawing.Point(0, 374)
         Me.EditRequestButton.Name = "EditRequestButton"
         Me.EditRequestButton.Size = New System.Drawing.Size(418, 151)
         Me.EditRequestButton.TabIndex = 3
@@ -60,7 +60,7 @@ Partial Class Prayer
         Me.PrayerRequestTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.PrayerRequestTitle.Location = New System.Drawing.Point(0, 0)
         Me.PrayerRequestTitle.Name = "PrayerRequestTitle"
-        Me.PrayerRequestTitle.Size = New System.Drawing.Size(418, 71)
+        Me.PrayerRequestTitle.Size = New System.Drawing.Size(418, 39)
         Me.PrayerRequestTitle.TabIndex = 4
         Me.PrayerRequestTitle.Text = "Prayer Request"
         '
@@ -70,7 +70,7 @@ Partial Class Prayer
         Me.UpdateButton.Cursor = System.Windows.Forms.Cursors.Default
         Me.UpdateButton.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UpdateButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.UpdateButton.Location = New System.Drawing.Point(284, 290)
+        Me.UpdateButton.Location = New System.Drawing.Point(285, 167)
         Me.UpdateButton.Name = "UpdateButton"
         Me.UpdateButton.Size = New System.Drawing.Size(134, 208)
         Me.UpdateButton.TabIndex = 7
@@ -83,7 +83,7 @@ Partial Class Prayer
         Me.UpdateRequestText.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.UpdateRequestText.Font = New System.Drawing.Font("Goudy Old Style", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UpdateRequestText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.UpdateRequestText.Location = New System.Drawing.Point(5, 290)
+        Me.UpdateRequestText.Location = New System.Drawing.Point(6, 167)
         Me.UpdateRequestText.Name = "UpdateRequestText"
         Me.UpdateRequestText.Size = New System.Drawing.Size(273, 205)
         Me.UpdateRequestText.TabIndex = 8
@@ -95,7 +95,7 @@ Partial Class Prayer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(418, 652)
+        Me.ClientSize = New System.Drawing.Size(418, 525)
         Me.Controls.Add(Me.UpdateRequestText)
         Me.Controls.Add(Me.UpdateButton)
         Me.Controls.Add(Me.PrayerRequestTitle)

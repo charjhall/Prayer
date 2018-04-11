@@ -33,7 +33,7 @@ Partial Class CustomMsgBox
         Me.btnok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnok.Font = New System.Drawing.Font("Goudy Old Style", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnok.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.btnok.Location = New System.Drawing.Point(243, 103)
+        Me.btnok.Location = New System.Drawing.Point(244, 143)
         Me.btnok.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnok.Name = "btnok"
         Me.btnok.Size = New System.Drawing.Size(98, 33)
@@ -47,7 +47,7 @@ Partial Class CustomMsgBox
         Me.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btncancel.Font = New System.Drawing.Font("Goudy Old Style", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.btncancel.Location = New System.Drawing.Point(348, 103)
+        Me.btncancel.Location = New System.Drawing.Point(348, 143)
         Me.btncancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(98, 33)
@@ -57,12 +57,11 @@ Partial Class CustomMsgBox
         '
         'lblmessage
         '
-        Me.lblmessage.AutoSize = True
-        Me.lblmessage.Font = New System.Drawing.Font("Goudy Old Style", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmessage.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblmessage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.lblmessage.Location = New System.Drawing.Point(10, 9)
         Me.lblmessage.Name = "lblmessage"
-        Me.lblmessage.Size = New System.Drawing.Size(61, 23)
+        Me.lblmessage.Size = New System.Drawing.Size(436, 130)
         Me.lblmessage.TabIndex = 3
         Me.lblmessage.Text = "Label1"
         '
@@ -70,8 +69,9 @@ Partial Class CustomMsgBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(448, 143)
+        Me.ClientSize = New System.Drawing.Size(449, 180)
         Me.Controls.Add(Me.lblmessage)
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.btnok)
@@ -83,7 +83,6 @@ Partial Class CustomMsgBox
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Title"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 

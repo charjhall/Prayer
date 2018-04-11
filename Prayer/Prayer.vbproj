@@ -106,10 +106,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRequest.Designer.vb">
+      <DependentUpon>AddRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomMsgBox.Designer.vb">
       <DependentUpon>CustomMsgBox.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomMsgBox.vb" />
+    <Compile Include="CustomMsgBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExampleRequest.Designer.vb">
+      <DependentUpon>ExampleRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +134,9 @@
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb" />
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -139,8 +155,14 @@
     <Compile Include="RequestFileInterface.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddRequest.resx">
+      <DependentUpon>AddRequest.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomMsgBox.resx">
       <DependentUpon>CustomMsgBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExampleRequest.resx">
+      <DependentUpon>ExampleRequest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
