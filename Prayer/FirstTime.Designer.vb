@@ -22,62 +22,68 @@ Partial Class FirstTime
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.SetSourceFile = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.AddRequestButton = New System.Windows.Forms.Button()
+        Me.UploadFileButton = New System.Windows.Forms.Button()
+        Me.OpenFileDialogRequests = New System.Windows.Forms.OpenFileDialog()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'SetSourceFile
+        'AddRequestButton
         '
-        Me.SetSourceFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.SetSourceFile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.SetSourceFile.FlatAppearance.BorderSize = 0
-        Me.SetSourceFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SetSourceFile.Font = New System.Drawing.Font("Goudy Old Style", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SetSourceFile.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.SetSourceFile.Location = New System.Drawing.Point(6, 102)
-        Me.SetSourceFile.Margin = New System.Windows.Forms.Padding(12)
-        Me.SetSourceFile.Name = "SetSourceFile"
-        Me.SetSourceFile.Size = New System.Drawing.Size(206, 116)
-        Me.SetSourceFile.TabIndex = 10
-        Me.SetSourceFile.Text = "Add a request"
-        Me.SetSourceFile.UseVisualStyleBackColor = False
+        Me.AddRequestButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.AddRequestButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.AddRequestButton.FlatAppearance.BorderSize = 0
+        Me.AddRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddRequestButton.Font = New System.Drawing.Font("Goudy Old Style", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddRequestButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.AddRequestButton.Location = New System.Drawing.Point(9, 102)
+        Me.AddRequestButton.Margin = New System.Windows.Forms.Padding(12)
+        Me.AddRequestButton.Name = "AddRequestButton"
+        Me.AddRequestButton.Size = New System.Drawing.Size(206, 139)
+        Me.AddRequestButton.TabIndex = 10
+        Me.AddRequestButton.Text = "Add a request"
+        Me.AddRequestButton.UseVisualStyleBackColor = False
         '
-        'Button1
+        'UploadFileButton
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Goudy Old Style", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(251, 102)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(206, 116)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Upload a prayer request file*"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.UploadFileButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.UploadFileButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.UploadFileButton.FlatAppearance.BorderSize = 0
+        Me.UploadFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UploadFileButton.Font = New System.Drawing.Font("Goudy Old Style", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UploadFileButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.UploadFileButton.Location = New System.Drawing.Point(239, 102)
+        Me.UploadFileButton.Margin = New System.Windows.Forms.Padding(12)
+        Me.UploadFileButton.Name = "UploadFileButton"
+        Me.UploadFileButton.Size = New System.Drawing.Size(206, 139)
+        Me.UploadFileButton.TabIndex = 11
+        Me.UploadFileButton.Text = "Upload a prayer request file"
+        Me.UploadFileButton.UseVisualStyleBackColor = False
         '
-        'LinkLabel1
+        'OpenFileDialogRequests
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Goudy Old Style", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.Location = New System.Drawing.Point(112, 291)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(247, 16)
-        Me.LinkLabel1.TabIndex = 12
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "*View the format that fits the program the best"
+        Me.OpenFileDialogRequests.Filter = """txt files (*.txt)|*.txt|All files (*.*)|*.*"""
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("Goudy Old Style", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(-2, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(464, 43)
+        Me.Label5.TabIndex = 27
+        Me.Label5.Text = "Welcome to Prayer Reminder!"
         '
         'FirstTime
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(456, 337)
-        Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.SetSourceFile)
+        Me.ClientSize = New System.Drawing.Size(456, 276)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.UploadFileButton)
+        Me.Controls.Add(Me.AddRequestButton)
         Me.Name = "FirstTime"
         Me.Text = "FirstTime"
         Me.ResumeLayout(False)
@@ -85,7 +91,8 @@ Partial Class FirstTime
 
     End Sub
 
-    Friend WithEvents SetSourceFile As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents AddRequestButton As Button
+    Friend WithEvents UploadFileButton As Button
+    Friend WithEvents OpenFileDialogRequests As OpenFileDialog
+    Friend WithEvents Label5 As Label
 End Class

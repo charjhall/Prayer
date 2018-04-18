@@ -58,7 +58,7 @@ Partial Class CustomMsgBox
         '
         'lblmessage
         '
-        Me.lblmessage.Font = New System.Drawing.Font("Goudy Old Style", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmessage.Font = New System.Drawing.Font("Goudy Old Style", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblmessage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(98, Byte), Integer))
         Me.lblmessage.Location = New System.Drawing.Point(10, 9)
         Me.lblmessage.Name = "lblmessage"

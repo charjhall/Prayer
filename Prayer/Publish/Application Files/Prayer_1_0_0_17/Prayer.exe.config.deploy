@@ -17,7 +17,16 @@
                 <value />
             </setting>
             <setting name="Interval" serializeAs="String">
-                <value>5</value>
+                <value>10</value>
+            </setting>
+            <setting name="HasRequests" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Requests" serializeAs="Xml">
+                <value>
+                    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+                </value>
             </setting>
         </Prayer.My.MySettings>
     </userSettings>

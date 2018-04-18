@@ -81,6 +81,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Friend ReadOnly Property Requests() As String
+            Get
+                Return ResourceManager.GetString("Requests", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to \\svr300-003\deptshare\yca\Chall\PrayerList.txt.
         '''</summary>
         Friend ReadOnly Property source() As String
