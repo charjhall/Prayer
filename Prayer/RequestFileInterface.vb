@@ -1,5 +1,7 @@
 ﻿Public Class RequestInterface
     Dim sr As IO.StreamReader
+    Public Sub New()
+    End Sub
     Public Function LoadRequests(clear As Boolean) As Boolean
         Try
             If My.Settings.FileSource.Equals("") Then

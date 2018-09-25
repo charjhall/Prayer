@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FirstTime
+Partial Class Welcome
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class FirstTime
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Welcome))
         Me.AddRequestButton = New System.Windows.Forms.Button()
         Me.UploadFileButton = New System.Windows.Forms.Button()
         Me.OpenFileDialogRequests = New System.Windows.Forms.OpenFileDialog()
@@ -76,16 +77,17 @@ Partial Class FirstTime
         Me.Label5.TabIndex = 27
         Me.Label5.Text = "Welcome to Prayer Reminder!"
         '
-        'FirstTime
+        'Welcome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.ClientSize = New System.Drawing.Size(456, 276)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.UploadFileButton)
         Me.Controls.Add(Me.AddRequestButton)
-        Me.Name = "FirstTime"
-        Me.Text = "FirstTime"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Welcome"
+        Me.Text = "Welcome"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

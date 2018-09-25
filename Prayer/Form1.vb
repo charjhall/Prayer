@@ -12,27 +12,25 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-
         ' Add any initialization after the InitializeComponent() call.
+
         PushNextTime(2.0)
         Randomize()
-        IndexNum.Text = My.Settings.RequestsIndex + 1
-        IntervalNum.Text = My.Settings.Interval
-        'My.Settings.FileSource = ""
-        'SetSourceFile.Visible = 'True 'My.Settings.FileSource.Equals("")
-        'If RFI.LoadRequests() Then
-        'Else
-        'My.Settings.Requests.Clear()
         My.Settings.HasRequests = My.Settings.Requests.Count > 0
+        Timer1.Interval = My.Settings.Interval
     End Sub
+
     Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.HasRequests Then
         Else
-            Dim firsttime As FirstTime = New FirstTime
+            Dim firsttime As Welcome = New Welcome
             firsttime.Show()
             My.Settings.RequestsIndex = 0
             Me.Close()
         End If
+    End Sub
+    Private Sub Form1_Close(sender As Object, e As EventArgs) Handles MyBase.Closed
+        My.Settings.Save()
     End Sub
     Public Sub PushNextTime(increment As Double)
         nextValidTime = DateTime.Now
@@ -73,18 +71,9 @@
         f2.Show()
     End Sub
 
-    Private Sub SetIntervalButton_Click_1(sender As Object, e As EventArgs) Handles SetIntervalButton.Click
-        If My.Settings.FileSource.Equals("") Then
-            cmsg.ShowBox("Please select a source file first.")
-        Else
-            My.Settings.Interval = CType(IntervalTextBox.Text, Integer)
-            Timer1.Interval = My.Settings.Interval
-            PushNextTime(1.0)
-            IntervalNum.Text = My.Settings.Interval
-        End If
-    End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SetSourceFile.Click
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         Dim result As DialogResult = cmsg.ShowBox("Click ok to have this file replace your current set of requests, cancel to add the requests in the file to the already existing requests.")
         Dim clear As Boolean
@@ -121,28 +110,9 @@
         cmsg.ShowBox(My.Settings.Interval)
     End Sub
 
-    Private Sub ExampleButton_Click(sender As Object, e As EventArgs) Handles ExampleButton.Click
+    Private Sub ExampleButton_Click(sender As Object, e As EventArgs)
         Dim exreq As ExampleRequest = New ExampleRequest
         exreq.Show()
-    End Sub
-
-
-    Private Sub ChangeIndexButton_Click(sender As Object, e As EventArgs) Handles ChangeIndexButton.Click
-        Try
-            Dim newIndex As Integer = CType(IndexTextBox.Text, Integer) - 1
-            newIndex = newIndex Mod (My.Settings.Requests.Count)
-            My.Settings.RequestsIndex = newIndex
-            UpdateIndex()
-            PushNextTime(1.0)
-            IndexTextBox.Text = ""
-        Catch ex As OverflowException
-            MsgBox("Please put a reasonably sized number in the box.")
-        Catch ex As InvalidCastException
-            cmsg.ShowBox("Please put a number in the index box.")
-        Catch ex As ArgumentOutOfRangeException
-            My.Settings.RequestsIndex = 0
-            IndexNum.Text = My.Settings.RequestsIndex + 1
-        End Try
     End Sub
 
     Private Sub FileSourceLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
@@ -153,37 +123,61 @@
         End Try
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
         Dim addreq As AddRequest = New AddRequest
         addreq.Show()
+        Me.Close()
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Closed
-        'UpdateRequests()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim col As Collections.Specialized.StringCollection = My.Settings.Requests
+    Dim col As Collections.Specialized.StringCollection
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+        col = My.Settings.Requests
         ShowNext()
     End Sub
     Private Sub UpdateIndex()
         My.Settings.RequestsIndex = My.Settings.RequestsIndex Mod My.Settings.Requests.Count
-        IndexNum.Text = My.Settings.RequestsIndex + 1
     End Sub
 
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
         cmsg.ShowBox("This is the line in the Prayer Requests text file you submitted.")
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
         cmsg.ShowBox("This is the time interval in minutes that requests appear on screen.")
-
     End Sub
 
     Private Sub FirstTimeButton_Click(sender As Object, e As EventArgs)
-        Dim FirstTime As FirstTime = New FirstTime()
+        Dim FirstTime As Welcome = New Welcome()
         FirstTime.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        PushNextTime(1.0)
+    End Sub
+
+
+    Private Sub TimerEnabledButton_Click(sender As Object, e As EventArgs)
+        If Timer1.Enabled Then
+            Timer1.Enabled = False
+            TimerEnabledButton.Text = "Resume"
+            NextTimeLabel.Text = "Paused"
+        Else
+            Timer1.Enabled = True
+            TimerEnabledButton.Text = "Pause"
+            NextTimeLabel.Text = nextValidTime.ToLongTimeString
+            PushNextTime(1.0)
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+        Dim AR As AllRequests = New AllRequests
+        AR.Show()
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+        My.Settings.TestColor = Color.FromArgb(43, 65, 98)
     End Sub
 End Class

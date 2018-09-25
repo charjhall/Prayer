@@ -8,12 +8,8 @@
                 RI.AddRequest(NewRequestRichTextBox.Text.Trim)
             End If
             If My.Settings.HasRequests Then
-                Dim f1 As Form1 = New Form1
-                f1.Show()
                 Me.Close()
             Else
-                Dim ft As FirstTime = New FirstTime
-                ft.Show()
                 Me.Close()
             End If
         End If
@@ -22,5 +18,11 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim exformat As ExampleRequest = New ExampleRequest()
         exformat.Show()
+    End Sub
+
+    Private Sub AddRequest_Load(sender As Object, e As EventArgs) Handles MyBase.Closed
+        Dim f1 As Form1 = New Form1
+        f1.Show()
+
     End Sub
 End Class

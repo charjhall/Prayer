@@ -1,4 +1,4 @@
-﻿Public Class FirstTime
+﻿Public Class Welcome
     Dim RFI As RequestInterface = New RequestInterface
     Dim cmsg As CustomMsgBox = New CustomMsgBox(True)
     Private Sub SetSourceFile_Click(sender As Object, e As EventArgs) Handles AddRequestButton.Click

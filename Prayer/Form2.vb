@@ -15,7 +15,7 @@
         PrayerRequestTitle.Text = requestInfo.Item(0)
         request = requestInfo.Item(1)
         prayer_request_label.Text = request
-        UpdateRequestText.Text = request
+        UpdateRequestText.Text = requestInfo(0) & ": " & request
     End Sub
     Public Sub New(request As String)
 

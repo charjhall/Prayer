@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\30036500\source\repos\Prayer\Prayer\Publish\</PublishUrl>
+    <PublishUrl>J:\CHall\Prayer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationRevision>27</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -109,6 +109,12 @@
     <Compile Include="AddRequest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AllRequests.Designer.vb">
+      <DependentUpon>AllRequests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AllRequests.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomMsgBox.Designer.vb">
       <DependentUpon>CustomMsgBox.vb</DependentUpon>
     </Compile>
@@ -156,10 +162,19 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RequestFileInterface.vb" />
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddRequest.resx">
       <DependentUpon>AddRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllRequests.resx">
+      <DependentUpon>AllRequests.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomMsgBox.resx">
       <DependentUpon>CustomMsgBox.vb</DependentUpon>
@@ -181,6 +196,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -210,7 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ctrans.ico" />
-    <Content Include="prayerhandstransparent.ico" />
     <None Include="Resources\PrayerList.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
